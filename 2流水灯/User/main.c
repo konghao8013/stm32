@@ -31,29 +31,32 @@
   */
 int main(void )
 {
+	uint32_t time_temp=300;
 	LED_GPIO_Config();
-    //开灯
-    GPIO_ResetBits(GPIOA,GPIO_Pin_1);
-    GPIO_ResetBits(GPIOA,GPIO_Pin_2);
-    GPIO_ResetBits(GPIOA,GPIO_Pin_3);
 
     while(1){
 		
-		R_LED(LED1_LED2_LED3_ON);
-		Rough_Delay_Ms(200);
-		R_LED(LED1_LED2_LED3_OFF);
-		Rough_Delay_Ms(200);
+		R_LED_ON_ONLY;
+		Rough_Delay_Ms(time_temp);
 		
 	
-		G_LED(LED1_LED2_LED3_ON);
-		Rough_Delay_Ms(200);
-		G_LED(LED1_LED2_LED3_OFF);
-		Rough_Delay_Ms(200);
+		G_LED_ON_ONLY;
+		Rough_Delay_Ms(time_temp);
 		
-		B_LED(LED1_LED2_LED3_ON);
-		Rough_Delay_Ms(200);
-		B_LED(LED1_LED2_LED3_OFF);
-		Rough_Delay_Ms(200);
+		B_LED_ON_ONLY;
+		Rough_Delay_Ms(time_temp);
+		
+		R_G_B_ALL_ON;		
+		Rough_Delay_Ms(time_temp);
+		
+		R_G_B_ALL_OFF;
+		Rough_Delay_Ms(time_temp);
+		
+		R_G_B_ALL_ON;		
+		Rough_Delay_Ms(time_temp);
+		
+		R_G_B_ALL_OFF;
+		Rough_Delay_Ms(time_temp);
 	}
 }
 
