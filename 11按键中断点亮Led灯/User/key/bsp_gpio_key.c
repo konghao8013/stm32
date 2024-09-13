@@ -40,6 +40,7 @@ void EXTI_KEY_GPIO_Config(void){
     GPIO_Init(WKUP_KEY1_GPIO_PORT,&gpio_initstruct);
 	
 	
+	GPIO_EXTILineConfig(WKUP_KEY1_KEY_IN_GPIO_EXTI_PORTSOUTCE,WKUP_KEY1_KEY_IN_GPIO_EXTI_PINSOUTCE);
 	exti_initstruct.EXTI_Line 		=WKUP_KEY1_KEY_IN_GPIO_EXTI_LINE;
 	exti_initstruct.EXTI_Mode 		=EXTI_Mode_Interrupt;
 	exti_initstruct.EXTI_Trigger 	=EXTI_Trigger_Falling;
