@@ -47,7 +47,7 @@ int main(void )
 		if(KEY_SCAN(WKUP_KEY2_GPIO_PORT,WKUP_KEY2_GPIO_PIN)==KEY_ON){
 			G_LED_TOGGLE;
 		}
-		//Rough_Delay_S(1);
+		Rough_Delay_S(3);
 			
 	}
 }

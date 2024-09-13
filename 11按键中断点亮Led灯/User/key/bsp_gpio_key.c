@@ -8,7 +8,7 @@
   * @note   无
   * @retval 无
   */
-void KEY_GPIO_Config(void){
+void EXTI_KEY_GPIO_Config(void){
 	
 	GPIO_InitTypeDef gpio_initstruct = {0};    
 	/*定义一个中断控制器结构体*/
@@ -71,7 +71,7 @@ void KEY_GPIO_Config(void){
   * @note   无
   * @retval 无
   */
-void EXTI_KEY_GPIO_Config(void){
+void KEY_GPIO_Config(void){
 	GPIO_InitTypeDef gpio_initstruct = {0};
     
     /*开启时钟*/
